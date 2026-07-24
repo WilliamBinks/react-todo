@@ -1,20 +1,22 @@
-function ToDoCard({toDoItem}) {
+function ToDoCard({toDoItem, onRemove, toggleComplete}) {
 
-    return <div className="toDo-Card">
+    return <div className={toDoItem.finished? "toDo-Card finished" : "toDo-Card"}>
+        <RemoveButton onRemove={() => onRemove(toDoItem)}/>
         <p>{toDoItem.text}</p>
-        <CompleteButton toDoItem={toDoItem}/>
+        <CompleteButton toDoItem={toDoItem} toggleComplete={toggleComplete}/>
     </div>
 }
 
-function CompleteButton(toDoItem){
-    function toggleComplete(){
-        alert("complete");
-    }
+function CompleteButton({toDoItem,toggleComplete}){
 
     return <div className="complete-btn-container">
-        <button className="complete-btn" onClick={toggleComplete} >complete</button>
+        <button className="complete-btn" onClick={() => toggleComplete(toDoItem)} >complete</button>
     </div>
 }
 
+function RemoveButton({onRemove}){
+    
+    return <button onClick={onRemove}>X</button>
+}
 export default ToDoCard
 
