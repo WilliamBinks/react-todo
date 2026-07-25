@@ -19,8 +19,12 @@ function App() {
     }
   return (
     <>
-      <ToDoInput onAdd={onAdd}/>
+      <h1 id="heading">To-Do List</h1>
+      <div id="list-container">
       {toDoList.map(toDoItem => <ToDoCard toggleComplete={toggleComplete} onRemove={onRemove} toDoItem={toDoItem} key={toDoItem.id}/>)}
+      </div>
+      <ToDoInput onAdd={onAdd}/>
+      
     </>
   );
 };
