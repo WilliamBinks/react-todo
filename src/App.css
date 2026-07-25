@@ -58,7 +58,12 @@
 
 .finished .complete-btn{
   background-color: lime;
-  content: "✔"
+}
+
+.finished .complete-btn::after{
+  color: black;
+  font-weight: 900;
+  content: "✓";
 }
 
 .finished .complete-btn:hover{
@@ -69,9 +74,13 @@
 
 .toDo-input-container{
   display: flex;
-  justify-content: center;
+  align-items: center;
   padding: 20px;
-  
+}
+
+.toDo-input-container form{
+  display: flex;
+  flex-grow: 1;
 }
 
 #input-label{

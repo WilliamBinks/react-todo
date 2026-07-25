@@ -11,13 +11,13 @@ function ToDoCard({toDoItem, onRemove, toggleComplete}) {
 function CompleteButton({toDoItem,toggleComplete}){
 
     return <div className="complete-btn-container">
-        <button className="complete-btn" onClick={() => toggleComplete(toDoItem)} ></button>
+        <button className="complete-btn" aria-label="complete task" onClick={() => toggleComplete(toDoItem)} ></button>
     </div>
 }
 
 function RemoveButton({onRemove}){
     
-    return <button onClick={onRemove} className="remove-btn"></button>
+    return <button onClick={onRemove} aria-label="remove task" className="remove-btn"></button>
 }
 export default ToDoCard
 

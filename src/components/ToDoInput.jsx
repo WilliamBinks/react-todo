@@ -17,8 +17,10 @@ function ToDoInput({ onAdd }) {
     return (<>
         <div className="toDo-input-container">
             <label htmlFor="toDo-input" id="input-label">Task: </label>
-            <input id="toDo-input" type="text" value={toDoItem} onChange={(e) => setToDo(e.target.value)}/>
-            <button onClick={addToDo} id="input-button">Add</button>
+            <form onSubmit={addToDo}>
+                <input id="toDo-input" type="text" value={toDoItem} onChange={(e) => setToDo(e.target.value)}/>
+                <button onClick={addToDo} id="input-button" aria-label="Add task">Add</button>
+            </form>
         </div>
         {error && <p className="error">{error}</p>}
         </>

@@ -10,8 +10,7 @@ function App() {
   }
 
   function onRemove(toDoItem) {
-    let update = toDoList.filter(item => item.id !== toDoItem.id);
-    setToDo(update);
+    setToDo(prev => prev.filter(item => item.id !== toDoItem.id));
   }
 
   function toggleComplete(toDoItem){
