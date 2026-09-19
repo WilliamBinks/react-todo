@@ -19,7 +19,7 @@ A React-JavaScript to-do app with full create-read-update-delete. The app was de
 
 ## What I learned
 Building this app helped me learn the fundamentals of React and its importance in modern web development. Specifically I learned to:
-- Manage state with the `useState` hook and keep a single source of truth
+- Manage state with the `useState` hook and keep a single source of truth.
 - Break a UI into small, reusable components and compose them together.
 - Pass data and callbacks between components via props.
 - Update state immutably using the functional updater form (`.filter()`, `.map()`)
