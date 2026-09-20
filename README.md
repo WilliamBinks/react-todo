@@ -22,5 +22,5 @@ Building this app helped me learn the fundamentals of React and its importance i
 - Manage state with the `useState` hook and keep a single source of truth.
 - Break a UI into small, reusable components and compose them together.
 - Pass data and callbacks between components via props.
-- Update state immutably using the functional updater form (`.filter()`, `.map()`)
+- Update state immutably using the functional updater form (`.filter()`, `.map()`).
 - Build controlled inputs and handle form submission and validation.
